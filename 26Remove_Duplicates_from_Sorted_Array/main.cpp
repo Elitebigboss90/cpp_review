@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int index = 1;
+        for(int i = 1; i< nums.size(); i++){
+            if(nums[i] != nums[index-1]){
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+        return index;
+    }
+};
+// i k, i k
+// 1 1, 1 1
+// 2 1, 2 1
